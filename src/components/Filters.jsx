@@ -1,5 +1,5 @@
 import { Form, useLoaderData, Link } from "react-router-dom";
-import FormInput from "./Forminput";
+import FormInput from "./FormInput";
 import FormSelect from "./FormSelect";
 import FormRange from "./FormRange";
 import FormCheckbox from "./FormCheckbox";

@@ -1,4 +1,4 @@
-import { Forminput, SubmitBtn } from "../components";
+import { FormInput, SubmitBtn } from "../components";
 import { Form, Link, redirect } from "react-router-dom";
 import { customFetch } from "../utils";
 import { toast } from "react-toastify";
@@ -28,9 +28,9 @@ const Register = () => {
         className="card w-96 p-8 bg-base-100 shadow-lg flex flex-col gap-y-4"
       >
         <h4 className="text-center text-3xl font-bold">Register</h4>
-        <Forminput type="text" label="username" name="username" />
-        <Forminput type="email" label="email" name="email" />
-        <Forminput type="password" label="password" name="password" />
+        <FormInput type="text" label="username" name="username" />
+        <FormInput type="email" label="email" name="email" />
+        <FormInput type="password" label="password" name="password" />
         <div className="mt-4">
           <SubmitBtn text="register" />
         </div>
