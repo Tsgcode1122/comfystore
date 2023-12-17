@@ -23,7 +23,7 @@ import { loader as checkoutLoader } from "./pages/Checkout";
 import { loader as ordersLoader } from "./pages/Orders";
 // actions
 
-import { action as registerAction } from "./pages/REgister";
+import { action as registerAction } from "./pages/Register";
 import { action as loginAction } from "./pages/Login";
 import { action as checkoutAction } from "./components/CheckoutForm";
 import { store } from "./store";
