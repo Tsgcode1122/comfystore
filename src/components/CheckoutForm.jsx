@@ -38,12 +38,15 @@ export const action =
       toast.success("order placed successfully");
       return redirect("/orders");
     } catch (error) {
-      console.log(error);
+      console.log("Error in loader function:", error);
       const errorMessage =
         error?.response?.data?.error?.message ||
-        "there was an error placing your order";
-      toast.error(errorMessage);
-      if (error?.response?.status === 401 || 403) return redirect("/login");
+        "There was an error placing your order";
+      console.error(errorMessage);
+      if (error?.response?.status === 401 || error?.response?.status === 403) {
+        console.warn("Redirecting to login due to unauthorized request");
+        return redirect("/login");
+      }
       return null;
     }
   };
@@ -60,4 +63,5 @@ const CheckoutForm = () => {
     </Form>
   );
 };
+
 export default CheckoutForm;
